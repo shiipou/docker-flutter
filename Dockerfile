@@ -37,4 +37,6 @@ RUN curl -sSLo flutter.tar.xz https://storage.googleapis.com/flutter_infra/relea
     && flutter precache \
     && chown ${USER_UID}:${USER_UID} -R ${FLUTTER_HOME}
 
+ENV PATH $PATH:$FLUTTER_HOME/bin
+
 ENTRYPOINT [ "flutter" ]
